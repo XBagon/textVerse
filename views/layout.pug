@@ -1,0 +1,18 @@
+doctype html
+
+block vars
+
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet' type='text/css' href='semantic/dist/semantic.min.css')
+    script(src='https://code.jquery.com/jquery-3.1.1.min.js' integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+    script(src='semantic/dist/semantic.min.js')
+    block js
+  body
+    .ui.menu
+      a.item.collapse(href="/" class=url=="index" && "active") textVerse
+      a.item(href="/things" class=url=="things" && "active") Things
+      a.item(href="/categories" class=url=="categories" && "active") Categories
+    block content

@@ -1,0 +1,31 @@
+extends layout
+
+block vars
+    -var url = "things";
+
+block js
+    script.
+        window.onload = function(){
+            $('.ui.dropdown')
+                .dropdown({
+                    values: [
+                        {
+                            name: 'Male',
+                            value: 'male'
+                        }
+                    ]
+                })
+        }
+
+block content
+    .ui.vertical.menu
+        .item
+            .ui.icon.input
+                input(type="text" placeholder="Search things...")
+        .item
+            .ui.floating.search.selection.multiple.scrolling.dropdown.icon.button
+                i.filter.icon
+                span.text
+                .menu
+
+
